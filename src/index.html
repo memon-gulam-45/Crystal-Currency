@@ -36,47 +36,50 @@
             class="border border-gray-300 rounded-lg text-lg px-3 py-2 w-full bg-white/70 focus:ring-2 focus:ring-blue-400 outline-none"
           />
         </div>
-
         <div
           id="dropdown"
-          class="flex justify-between items-center flex-wrap gap-4 text-center"
+          class="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10 text-center"
         >
-          <!-- FROM -->
-          <div id="from" class="w-36 sm:w-40">
+          <!-- From Currency -->
+          <div id="from" class="w-40">
             <p class="text-lg font-medium mb-1">From</p>
             <div
-              class="flex items-center justify-between border border-gray-300 rounded-md px-3 py-2 bg-white/70"
+              class="flex items-center justify-between border border-gray-300 rounded-xl px-3 py-2 bg-white/60 backdrop-blur-md shadow-sm"
             >
               <img
                 id="from-flag"
                 src="https://flagsapi.com/US/flat/64.png"
-                class="w-6 sm:w-8"
+                class="w-7 sm:w-8 rounded-md"
               />
               <select
                 name="from"
-                class="bg-transparent text-lg outline-none w-full"
+                class="bg-transparent text-lg font-medium outline-none w-full ml-2"
               ></select>
             </div>
           </div>
 
-          <i
-            id="swap"
-            class="fa-solid fa-right-left text-2xl text-gray-700 cursor-pointer hover:rotate-180 duration-300"
-          ></i>
+          <!-- Swap Icon -->
+          <div class="flex justify-center items-center">
+            <i
+              id="swap"
+              class="fa-solid fa-right-left text-2xl text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:rotate-180 hover:text-blue-600 active:scale-90 bg-white/70 backdrop-blur-md p-3 rounded-full shadow-md hover:shadow-lg"
+            ></i>
+          </div>
 
-          <div id="to" class="w-36 sm:w-40">
+          <!-- To Currency -->
+          <div id="to" class="w-40">
             <p class="text-lg font-medium mb-1">To</p>
             <div
-              class="flex items-center justify-between border border-gray-300 rounded-md px-3 py-2 bg-white/70"
+              class="flex items-center justify-between border border-gray-300 rounded-xl px-3 py-2 bg-white/60 backdrop-blur-md shadow-sm"
             >
               <img
                 id="to-flag"
                 src="https://flagsapi.com/IN/flat/64.png"
-                class="w-6 sm:w-8"
+                class="w-7 sm:w-8 rounded-md"
               />
               <select
                 name="to"
-                class="bg-transparent text-lg outline-none w-full"
+                class="bg-transparent text-lg font-medium outline-none w-full ml-2"
               ></select>
             </div>
           </div>
