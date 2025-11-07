@@ -1,28 +1,13 @@
-const BASE_URL = "https://open.er-api.com/v6/latest/";
+const BASE_URL =
+  "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
 
-const fromCurr = document.getElementById("from-currency");
-const toCurr = document.getElementById("to-currency");
-const fromFlag = document.getElementById("from-flag");
-const toFlag = document.getElementById("to-flag");
-const swapBtn = document.getElementById("swap");
-const msg = document.getElementById("msg");
-
-const currencySymbols = {
-  USD: "$",
-  INR: "₹",
-  EUR: "€",
-  GBP: "£",
-  JPY: "¥",
-  AUD: "A$",
-  CAD: "C$",
-  CHF: "Fr",
-  CNY: "¥",
-  RUB: "₽",
-};
-
-window.addEventListener("load", () => {
-  updateExchangeRate();
-});
+const dropdowns = document.querySelectorAll("#dropdown select");
+const btn = document.querySelector("form button");
+const fromCurr = document.querySelector("#from select");
+const toCurr = document.querySelector("#to select");
+const msg = document.querySelector("#msg");
+const swapBtn = document.querySelector("#swap");
+const lastUpdated = document.querySelector("#last-updated");
 
 for (let select of dropdowns) {
   for (currCode in countryList) {
@@ -57,20 +42,23 @@ btn.addEventListener("click", (evt) => {
 
 const updateExchangeRate = async () => {
   let amount = document.querySelector("#amount input");
-  let amtVal = amount.value;
-  if (amtVal === "" || amtVal < 1) {
-    amtVal = 1;
-    amount.value = "1";
-  }
-
+  let amtVal = amount.value || 1;
   const from = fromCurr.value.toLowerCase();
   const to = toCurr.value.toLowerCase();
+  try {
+    const URL = `${BASE_URL}/${from}.json`;
+    const response = await fetch(URL);
+    const data = await response.json();
+    const rate = data[from][to];
+    const lastDate = data.date;
 
-  const URL = `${BASE_URL}/${from}.json`;
-  let response = await fetch(URL);
-  let data = await response.json();
-  let rate = data[from][to];
-
-  let finalAmount = amtVal * rate;
-  msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
+    let finalAmount = (amtVal * rate).toFixed(2);
+    msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
+    lastUpdated.textContent = `Last Updated: ${lastDate}`;
+  } catch (err) {
+    msg.innerText = "Error fetching rate. Try again.";
+    console.log(err);
+  }
 };
+
+window.addEventListener("load", updateExchangeRate);
