@@ -6,6 +6,12 @@ Crystal Currency uses live API data to fetch accurate exchange rates and display
 
 ---
 
+## ▶️ Live Demo
+
+https://your-live-demo-link.com
+
+---
+
 ## 🚀 Features
 
 - **🔄 Real-time currency conversion**
@@ -28,15 +34,50 @@ Crystal Currency uses live API data to fetch accurate exchange rates and display
 
 ---
 
-## 🔗 APIs Used
+## 📂 Project Structure
 
-1.  **Exchange Rates**
-    `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/{currency}.json`
-2.  **Flags**
-    `https://flagsapi.com/{COUNTRY_CODE}/flat/64.png`
+<pre> 
+Crystal-Currency/
+├── node_modules/
+│   └── ...
+├── src/
+│   ├── codes.js
+│   ├── index.html
+│   ├── input.css
+│   ├── output.css
+│   └── script.js
+│
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
+</pre>
 
 ---
 
-## 📂 Project Structure
+## ⚙️ How It Works
 
-<pre> Crystal-Currency/ │── index.html │── style.css (optional) │── script.js │── countryList.js │── README.md └── assets/ </pre>
+1.  User selects **From** and **To** currencies from the dropdowns.
+2.  Currency list + country flags load dynamically from the **`countryList.js`** mapping and the **Flags API**.
+3.  On clicking **Convert**, the real-time exchange rate is fetched from the **Exchange Rates API**.
+4.  The result updates instantly along with the **Last Updated timestamp**.
+5.  The **Swap button** instantly flips the selected currencies.
+
+---
+
+🙌 Contributing
+Contributions are welcome! Feel free to fork this repo and create pull requests.
+
+---
+
+## 👨‍💻 Developer
+
+**Made with 🤍 and laughter by [Gulam Mohyudin Memon](https://github.com/memon-gulam-45)**
+
+> “Because coding doesn’t always have to be serious!” 😄
+
+---
+
+### ⭐ If you like it...
+
+Give this repo a **star** ⭐ and share it with your friends who think they have good memory!
