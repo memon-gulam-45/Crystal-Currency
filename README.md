@@ -72,9 +72,7 @@ Contributions are welcome! Feel free to fork this repo and create pull requests.
 
 ## 👨‍💻 Developer
 
-**Made with 🤍 and laughter by [Gulam Mohyudin Memon](https://github.com/memon-gulam-45)**
-
-> “Because coding doesn’t always have to be serious!” 😄
+**Made with 🤍 by [Gulam Mohyudin Memon](https://github.com/memon-gulam-45)**
 
 ---
 
