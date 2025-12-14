@@ -8,7 +8,7 @@ Crystal Currency uses live API data to fetch accurate exchange rates and display
 
 ## ▶️ Live Demo
 
-https://your-live-demo-link.com
+[Click Here](https://memon-gulam-45.github.io/Crystal-Currency/)
 
 ---
 
