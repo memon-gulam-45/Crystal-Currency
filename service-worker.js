@@ -3,9 +3,9 @@ const CACHE_NAME = "crystal-currency-v1";
 const ASSETS = [
   "./",
   "./index.html",
-  "./script.js",
-  "./codes.js",
-  "./output.css",
+  "./src/script.js",
+  "./src/codes.js",
+  "./src/output.css",
   "./manifest.json",
 ];
 
