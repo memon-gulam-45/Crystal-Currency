@@ -72,3 +72,20 @@ swapBtn.addEventListener("click", () => {
 });
 
 window.addEventListener("load", updateExchangeRate);
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("service-worker.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch((err) => console.log("SW registration failed", err));
+  });
+}
+
+window.addEventListener("offline", () => {
+  msg.innerText = "Offline mode: last cached UI available";
+});
+
+window.addEventListener("online", () => {
+  updateExchangeRate();
+});
