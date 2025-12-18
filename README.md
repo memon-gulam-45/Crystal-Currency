@@ -14,15 +14,15 @@ Crystal Currency uses live API data to fetch accurate exchange rates and display
 
 ## 🚀 Features
 
-- **🔄 Real-time currency conversion**
-- **⚡ Instant two-way conversion** — enter amount in either currency to see the result dynamically
-- **🚩 Auto-updated country flags**
-- **🎯 Swap currency with one tap**
-- **🌐 Live exchange rates** using **Fawaz Ahmed Currency API**
-- **📱 Fully responsive UI**
-- **🧊 Clean glass-effect design**
-- **📱 PWA-enabled** — installable and works offline
-- **⏱ Last updated timestamp** for latest rates
+- **Real-time currency conversion**
+- **Instant two-way conversion** — enter amount in either currency to see the result dynamically
+- **Auto-updated country flags**
+- **Swap currency with one tap**
+- **Live exchange rates** using **Fawaz Ahmed Currency API**
+- **Fully responsive UI**
+- **Clean glass-effect design**
+- **PWA-enabled** — installable and works offline
+- **Last updated timestamp** for latest rates
 
 ---
 
