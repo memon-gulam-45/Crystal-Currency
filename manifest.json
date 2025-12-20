@@ -4,7 +4,7 @@
   "description": "Real-time glassmorphic currency converter with live exchange rates",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#e0f2fe",
+  "background_color": "#ffffff",
   "theme_color": "#C6B7E9",
   "orientation": "portrait",
   "icons": [
