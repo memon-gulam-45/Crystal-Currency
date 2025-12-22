@@ -1,6 +1,6 @@
 {
   "name": "Crystal Currency",
-  "short_name": "Currency",
+  "short_name": "Crystal Currency",
   "description": "Real-time glassmorphic currency converter with live exchange rates",
   "start_url": "./index.html",
   "display": "standalone",
